@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('conteudo'); ?>
 <?php if($errors->any()): ?>
     <script>
@@ -143,7 +141,7 @@
                     <div class="col-md-2">
                         <label for="valor" class="form-label">Valor (R$)</label>
                         <input type="text" class="form-control bg-dark text-light border-warning" 
-                               id="valor" name="valor" placeholder="Ex: 95.000,00" value="<?php echo e($carros->valor); ?>"  />
+                               id="valor" name="valor" placeholder="Ex: 95000,00" value="<?php echo e($carros->valor); ?>"  />
                     </div>
                     <div class="col-md-4">
                         <label for="imagem_principal" class="form-label">Link da Imagem Principal</label>

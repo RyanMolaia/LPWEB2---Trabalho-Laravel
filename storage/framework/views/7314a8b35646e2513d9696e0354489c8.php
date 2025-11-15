@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('conteudo'); ?>
 <?php if(session('success')): ?>
     <script>

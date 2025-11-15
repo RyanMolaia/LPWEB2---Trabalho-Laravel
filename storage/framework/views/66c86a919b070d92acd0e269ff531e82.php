@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('login'); ?>
 <?php if(session('success')): ?>
     <script>

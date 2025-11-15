@@ -36,72 +36,55 @@
 
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item <?php echo e(request()->routeIs('site.index') ? 'active' : ''); ?>">
-                            <a class="nav-link" href="<?php echo e(route('site.index')); ?>">Loja</a>
-                        </li>
-                        <li class="nav-item <?php echo e(request()->routeIs('site.novos') ? 'active' : ''); ?>">
-                            <a class="nav-link" href="<?php echo e(route('site.novos')); ?>">Novos</a>
-                        </li>
+                    <ul class="navbar-nav mlcar-nav">
+                        <div class="nav-left d-flex">
+        <li class="nav-item"><a class="nav-link" href="<?php echo e(route('site.index')); ?>">Loja</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo e(route('site.novos')); ?>">Novos</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo e(route('site.seminovos')); ?>">Seminovos</a></li>
+    </div>
 
-                        <li class="nav-item <?php echo e(request()->routeIs('site.seminovos') ? 'active' : ''); ?>">
-                            <a class="nav-link" href="<?php echo e(route('site.seminovos')); ?>">Seminovos</a>
-                        </li>
-                        
-                        <!-- Central logo -->
-                        <li class="nav-item">
-                            <a class="nav-link navbar-brand" href="<?php echo e(route('site.index')); ?>">
-                                <span><span>ML</span>car</span>
+    <!-- LOGO CENTRAL -->
+    <div class="nav-center">
+        <a class="navbar-brand" href="<?php echo e(route('site.index')); ?>">
+            <span><span>ML</span>CAR</span>
+        </a>
+    </div>
+
+    <!-- BLOCO DIREITO -->
+    <div class="nav-right d-flex">
+        <li class="nav-item"><a class="nav-link" href="<?php echo e(route('site.contato')); ?>">Contato</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo e(route('site.sobre')); ?>">Sobre</a></li>
+
+        <?php if(auth()->guard()->check()): ?>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-semibold" data-bs-toggle="dropdown">
+                    <i class="bi bi-person-circle me-1"></i> <?php echo e(Auth::user()->name); ?>
+
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="<?php echo e(route('site.perfilusu')); ?>">Perfil</a></li>
+
+                    <?php if(Auth::user()->is_admin): ?>
+                        <li>
+                            <a class="dropdown-item text-danger" href="<?php echo e(route('menuadmin.index')); ?>">
+                                Painel Administrativo
                             </a>
                         </li>
+                    <?php endif; ?>
 
-                        <li class="nav-item <?php echo e(request()->routeIs('site.contato') ? 'active' : ''); ?>">
-                            <a class="nav-link" href="<?php echo e(route('site.contato')); ?>">Contato</a>
-                        </li>
+                    <li><hr class="dropdown-divider"></li>
 
-                        <li class="nav-item <?php echo e(request()->routeIs('site.sobre') ? 'active' : ''); ?>">
-                            <a class="nav-link" href="<?php echo e(route('site.sobre')); ?>">Sobre</a>
-                        </li>
-
-                        <?php if(auth()->guard()->check()): ?>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle fw-semibold" href="#" id="userDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-person-circle me-1"></i> <?php echo e(Auth::user()->name); ?>
-
-                                </a>
-
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-
-                                    
-                                    <li><a class="dropdown-item" href="<?php echo e(route('site.perfilusu')); ?>">Perfil</a></li>
-
-                                    
-                                    <?php if(Auth::user()->is_admin): ?>
-                                        <li>
-                                            <a class="dropdown-item text-danger fw-semibold" href="<?php echo e(route('menuadmin.index')); ?>">
-                                                Painel Administrativo
-                                            </a>
-                                        </li>
-                                    <?php endif; ?>
-
-                                    <li><hr class="dropdown-divider"></li>
-
-                                    
-                                    <li>
-                                        <form action="<?php echo e(route('logout')); ?>" method="POST">
-                                            <?php echo csrf_field(); ?>
-                                            <button class="dropdown-item text-danger" type="submit">Sair</button>
-                                        </form>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        <?php else: ?>
-                            <li class="nav-item">
-                                <a class="nav-link fw-semibold" href="<?php echo e(route('login')); ?>">Entrar</a>
-                            </li>
-                        <?php endif; ?>
+                    <li>
+                        <form action="<?php echo e(route('logout')); ?>" method="POST"><?php echo csrf_field(); ?>
+                            <button class="dropdown-item text-danger">Sair</button>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        <?php else: ?>
+            <li class="nav-item"><a class="nav-link fw-semibold" href="<?php echo e(route('login')); ?>">Entrar</a></li>
+        <?php endif; ?>
+    </div>
                     </ul>
                 </div>
             </nav>

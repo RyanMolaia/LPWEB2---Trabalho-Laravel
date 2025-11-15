@@ -54,11 +54,49 @@
 
         <div class="gallery-container">
             @foreach ($galeria as $img)
-                <img src="{{ trim($img) }}" class="gallery-image" alt="Fotos do Carro">
+                <img src="{{ trim($img) }}" class="gallery-image"style="cursor: pointer;"alt="Fotos do Carro">
             @endforeach
         </div>
 
         @endif
 
     </div>
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    document.querySelectorAll('.gallery-image').forEach(img => {
+
+        img.addEventListener('click', function () {
+
+            Swal.fire({
+                html: `
+                    <div class="mlcar-popup-wrapper">
+                        <button class="mlcar-close-btn">&times;</button>
+                        <img src="${this.src}" class="mlcar-popup-img" />
+                    </div>
+                `,
+                showConfirmButton: false,
+                background: 'transparent',
+                width: 'auto',
+                padding: 0,
+                allowOutsideClick: false,
+                backdrop: 'rgba(0,0,0,0.75)',
+                customClass: {
+                    popup: 'mlcar-image-popup'
+                },
+                didOpen: () => {
+                    document.querySelector('.mlcar-close-btn')
+                        .addEventListener('click', () => Swal.close());
+                }
+            });
+
+        });
+    });
+
+});
+</script>
+@endpush
+
 @endsection

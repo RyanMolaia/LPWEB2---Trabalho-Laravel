@@ -53,7 +53,7 @@
                                 <p class="car-details">
                                     Ano: <strong>{{ $carro->ano }}</strong><br>
                                     Km: <strong>{{ number_format($carro->quilometragem, 0, ',', '.') }}</strong><br>
-                                    Cor: <strong>{{ $carro->cor->nome }}</strong>
+                                    Cor: <strong>{{ $carro->cor->nome }}</strong><br>
                                     Status: <strong>{{ $carro->status }}</strong>
                                 </p>
 

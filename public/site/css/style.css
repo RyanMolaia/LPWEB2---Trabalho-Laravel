@@ -1,4 +1,6 @@
-/* FONTE GLOBAL */
+/* ============================================================
+   FONTE GLOBAL
+   ============================================================ */
 * {
     margin: 0;
     padding: 0;
@@ -52,7 +54,7 @@ body {
 
 .nav-link:hover,
 .nav-item.active .nav-link {
-    color: #eacb69  !important;
+    color: #eacb69 !important;
 }
 
 /* LOGO CENTRAL */
@@ -89,7 +91,7 @@ body {
 }
 
 .dropdown-item:hover {
-    background: #c9a227  !important;
+    background: #c9a227 !important;
     color: #1f1f1f !important;
 }
 
@@ -106,7 +108,7 @@ main {
 }
 
 /* ============================================================
-   CARDS DE VEÍCULOS (para index de carros)
+   CARDS DE VEÍCULOS (ATUALIZADO)
    ============================================================ */
 
 .car-card {
@@ -116,41 +118,59 @@ main {
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     transition: transform .3s;
+
+    /* Correção: Altura padrão */
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
 }
 
 .car-card:hover {
     transform: translateY(-5px);
 }
 
+/* Imagem uniforme */
 .car-card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
+    border-bottom: 1px solid #c9a227;
 }
 
+/* Conteúdo interno */
 .car-card-body {
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
-.car-title {
+/* Título */
+.car-title,
+.car-tittle {
     font-size: 18px;
     font-weight: 600;
     color: #fff;
+    min-height: 52px;
 }
 
+/* Detalhes */
 .car-details {
     font-size: 14px;
     color: #cfcfcf;
+    min-height: 95px;
 }
 
+/* Preço */
 .car-price {
     font-size: 20px;
     font-weight: 700;
     color: #c9a227;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-/* Botão padrão */
+/* Botão */
 .btn-gold {
     background: #c9a227;
     color: #1c1c1c;
@@ -158,14 +178,20 @@ main {
     padding: 10px 20px;
     font-weight: 600;
     border-radius: 8px;
-    display: inline-block;
-    margin-top: 12px;
+    display: block;
+    width: 100%;
     text-align: center;
+    margin-top: auto !important;
 }
 
 .btn-gold:hover {
     background: #b18f1b;
     color: #fff;
+}
+
+/* Distância entre cards */
+.row > div {
+    margin-bottom: 25px !important;
 }
 
 /* ============================================================
@@ -208,6 +234,10 @@ main {
     }
 }
 
+/* ============================================================
+   PÁGINA DE DETALHES
+   ============================================================ */
+
 .car-details-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -216,23 +246,17 @@ main {
 }
 
 .btn-back {
-   display: inline-flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
-
     background: #2f2f2f; 
     color: #c9a227;    
     border: 1px solid #c9a227;
     padding: 10px 18px;
     border-radius: 8px;
-
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-}
-
-.btn-back i {
-    font-size: 1.1rem;
 }
 
 .btn-back:hover {
@@ -251,18 +275,26 @@ main {
     box-shadow: 0 5px 20px rgba(0, 0, 0, .6);
 }
 
-.main-image {
-    flex: 1;
-}
 .main-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+	padding-rigth: 40px;
+}
+.car-info {
+    padding-left: 20px; 
 }
 
-.car-info {
-    flex: 1;
-    padding: 25px;
+
+.car-info .car-price {
+    background: #c9a227;
+    color: #1f1f1f;
+    display: inline-block;
+    padding: 8px 15px;
+    font-weight: 700;
+    border-radius: 6px;
+    margin: 10px 0 20px 0;
+    box-shadow: 0 0 12px rgba(201,162,39,0.4);
 }
 
 .car-title {
@@ -276,32 +308,6 @@ main {
     color: #f5d87a;
     font-size: 24px;
     margin-bottom: 20px;
-}
-
-.car-desc {
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-.spec-list {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 25px;
-}
-.spec-list li {
-    margin-bottom: 8px;
-}
-
-.btn-whatsapp {
-    display: inline-block;
-    background: #25D366;
-    color: #fff !important;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font-weight: 600;
-}
-.btn-whatsapp:hover {
-    background: #1ebe57;
 }
 
 .gallery-title {
@@ -323,6 +329,10 @@ main {
     border-radius: 8px;
     border: 1px solid #c9a227;
 }
+
+/* ============================================================
+   PESQUISA
+   ============================================================ */
 
 .search-box {
     width: 100%;
@@ -353,12 +363,7 @@ main {
     border: none;
     padding: 12px 18px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .3s ease;
-	background: #fff;
-	
+    background: #fff;
 }
 
 .search-box button i {
@@ -367,18 +372,160 @@ main {
     font-weight: bold;
 }
 
-.car-list-wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
+/* LINKS */
 a {
     text-decoration: none !important;
 }
-
 a:hover,
 a:focus,
 a:active {
     text-decoration: none !important;
 }
 
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #25D366 !important;
+    color: #fff !important;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    transition: .3s ease;
+    font-size: 15px;
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe57 !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp i {
+    font-size: 18px;
+}
+
+.spec-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.spec-list li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #f1f1f1;
+    display: flex;
+    gap: 6px;
+}
+.car-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 90%;
+}
+
+/* ===== BACKDROP COM BLUR ===== */
+.swal2-container.swal2-backdrop-show {
+    backdrop-filter: blur(4px);
+}
+
+/* ===== CAIXA DO POPUP ===== */
+.mlcar-image-popup {
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* ===== WRAPPER DA IMAGEM ===== */
+.mlcar-popup-wrapper {
+    position: relative;
+    display: inline-block;
+    animation: zoomIn 0.25s ease-out;
+}
+
+/* ===== BOTÃO DE FECHAR (X) – NOVO DESIGN ===== */
+.mlcar-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 38px;
+    height: 38px;
+
+    background: #c9a227;
+    color: #000; /* Preto suave */
+    border-radius: 50%;
+
+    border: none; /* remove borda esquisita */
+    outline: none;
+
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px; /* centraliza o X */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 0 10px rgba(201,162,39,0.6),
+        0 0 4px rgba(0,0,0,0.5);
+
+    transition: 0.2s ease-in-out;
+    z-index: 9999;
+}
+
+/* HOVER – mais dourado */
+.mlcar-close-btn:hover {
+    background: #e5c14b;
+    transform: scale(1.08);
+}
+
+/* ===== IMAGEM ===== */
+.mlcar-popup-img {
+    max-height: 90vh;
+    border-radius: 12px;
+    border: 4px solid #c9a227;
+    box-shadow:
+        0 0 25px rgba(201,162,39,0.4),
+        0 0 10px rgba(0,0,0,0.7);
+    display: block;
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+.mlcar-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* blocos */
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-right {
+    margin-left: auto;
+}
+
+/* garante que nada sobreponha o logo */
+.navbar { position: relative; }

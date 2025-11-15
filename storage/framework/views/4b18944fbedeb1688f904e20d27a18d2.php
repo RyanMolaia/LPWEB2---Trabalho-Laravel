@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('conteudo'); ?>
     <div class="container-fluid py-5">
     <div class="text-center text-light">

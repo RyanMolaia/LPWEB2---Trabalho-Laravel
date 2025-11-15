@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('conteudo'); ?>
 <div class="container py-5">
 
