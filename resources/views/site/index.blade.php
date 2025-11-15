@@ -54,6 +54,7 @@
                                     Ano: <strong>{{ $carro->ano }}</strong><br>
                                     Km: <strong>{{ number_format($carro->quilometragem, 0, ',', '.') }}</strong><br>
                                     Cor: <strong>{{ $carro->cor->nome }}</strong>
+                                    Status: <strong>{{ $carro->status }}</strong>
                                 </p>
 
                                 <div class="car-price">

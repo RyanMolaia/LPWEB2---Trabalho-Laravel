@@ -40,8 +40,7 @@ class CarrosController extends BaseAdminController
                 'valor' => ['required', 'numeric', 'min:0'],
                 'descricao' => ['required', 'string', 'max:1000'],
                 'imagem_principal' => ['required', 'url', 'max:1000'],
-                'outras_imagens' => ['required', 'min:2'],
-                'outras_imagens.*' => ['url', 'max:1000'],
+                'outras_imagens' => ['required', 'min:2', 'string'],
             ],
             [
                             
@@ -69,14 +68,15 @@ class CarrosController extends BaseAdminController
 
                 'imagem_principal.required' => 'Informe o link da imagem principal.',
                 'imagem_principal.url' => 'O link da imagem principal deve ser uma URL válida.',
-                'outras_imagens.required' => 'Informe pelo menos duas imagens adicionais.',
+                'outras_imagens.required' => 'Informe o link das imagens adicionais.',
                 'outras_imagens.min' => 'É necessário enviar pelo menos duas imagens adicionais.',
-                'outras_imagens.*.url' => 'Cada imagem adicional deve ser uma URL válida.',
+                'outras_imagens.string' => 'As imagens adicionais devem ser fornecidas como texto.',
+
             ]
             );
 
             $dados = $request->all();
-            $dados['outras_imagens'] = json_encode($request->outras_imagens);
+            $dados['outras_imagens'] = $request->outras_imagens;
 
             $carros = new Carro();
             $carros->fill($dados);
@@ -93,11 +93,6 @@ class CarrosController extends BaseAdminController
             $marcas = Marca::all();
             $modelos = Modelo::all();
             $cores = Cor::all();
-
-             if ($carros->outras_imagens) {
-                $carros->outras_imagens = json_decode($carros->outras_imagens, true);
-            }
-
 
             return view('menuadmin.carros.alterar', compact('carros', 'marcas', 'modelos', 'cores'));
         }
@@ -118,8 +113,7 @@ class CarrosController extends BaseAdminController
                 'valor' => ['required', 'numeric', 'min:0'],
                 'descricao' => ['required', 'string', 'max:1000'],
                 'imagem_principal' => ['required', 'url', 'max:1000'],
-                'outras_imagens' => ['required', 'min:2'],
-                'outras_imagens.*' => ['url', 'max:1000'],
+                'outras_imagens' => ['required', 'min:2', 'string'],
             ],
             [
                             
@@ -146,14 +140,14 @@ class CarrosController extends BaseAdminController
 
                 'imagem_principal.required' => 'Informe o link da imagem principal.',
                 'imagem_principal.url' => 'O link da imagem principal deve ser uma URL válida.',
-                'outras_imagens.required' => 'Informe pelo menos duas imagens adicionais.',
+                'outras_imagens.required' => 'Informe o link das imagens adicionais.',
                 'outras_imagens.min' => 'É necessário enviar pelo menos duas imagens adicionais.',
-                'outras_imagens.*.url' => 'Cada imagem adicional deve ser uma URL válida.',
+                'outras_imagens.string' => 'As imagens adicionais devem ser fornecidas como texto.',
             ]
             );
 
             $dados  = $request->all();
-            $dados ['outras_imagens'] = json_encode($request->outras_imagens);
+            $dados['outras_imagens'] = $request->outras_imagens;
             $carros->update($dados );
 
             return redirect()

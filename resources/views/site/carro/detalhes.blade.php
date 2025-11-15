@@ -38,6 +38,7 @@
                     <li><strong>Ano:</strong> {{ $carros->ano }}</li>
                     <li><strong>Quilometragem:</strong> {{ number_format($carros->quilometragem, 0, ',', '.') }}</li>
                     <li><strong>Cor:</strong> {{ $carros->cor->nome }}</li>
+                    <li><strong>Status:</strong> {{ $carros->status }}</li>
                 </ul>
 
                 <a href="https://wa.me/5514996370990?=Olá! Tenho interesse no {{ $carros->modelo->nome }} (ID {{ $carros->id }})"

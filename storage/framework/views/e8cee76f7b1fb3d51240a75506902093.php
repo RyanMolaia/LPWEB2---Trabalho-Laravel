@@ -55,6 +55,7 @@
                                     Ano: <strong><?php echo e($carro->ano); ?></strong><br>
                                     Km: <strong><?php echo e(number_format($carro->quilometragem, 0, ',', '.')); ?></strong><br>
                                     Cor: <strong><?php echo e($carro->cor->nome); ?></strong>
+                                    Status: <strong><?php echo e($carro->status); ?></strong>
                                 </p>
 
                                 <div class="car-price">

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->decimal('valor',10,2);
             $table->text('descricao');
             $table->string('imagem_principal');
-            $table->json('outras_imagens')->nullable();
+           $table->longText('outras_imagens')->nullable();
             $table->timestamps();
 
         });

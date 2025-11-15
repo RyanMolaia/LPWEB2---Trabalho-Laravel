@@ -11,6 +11,7 @@
     <meta name="author" content="">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="<?php echo e(asset('site/css/bootstrap.min.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('site/css/style.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('site/css/responsive.css')); ?>">
@@ -27,11 +28,12 @@
     <header class="header_section">
         <div class="container">
             <nav class="navbar navbar-expand-lg custom_nav-container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class=""> </span>
+                    <span class=""></span>
                 </button>
+
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
@@ -53,12 +55,12 @@
                             </a>
                         </li>
 
-                        
-                        <li class="nav-item <?php echo e(request()->routeIs('site.sobre') ? 'active' : ''); ?>">
-                            <a class="nav-link" href="<?php echo e(route('site.sobre')); ?>">Sobre</a>
-                        </li>
                         <li class="nav-item <?php echo e(request()->routeIs('site.contato') ? 'active' : ''); ?>">
                             <a class="nav-link" href="<?php echo e(route('site.contato')); ?>">Contato</a>
+                        </li>
+
+                        <li class="nav-item <?php echo e(request()->routeIs('site.sobre') ? 'active' : ''); ?>">
+                            <a class="nav-link" href="<?php echo e(route('site.sobre')); ?>">Sobre</a>
                         </li>
 
                         <?php if(auth()->guard()->check()): ?>
@@ -128,6 +130,8 @@
     <script src="<?php echo e(asset('site/js/jquery.mCustomScrollbar.concat.min.js')); ?>"></script>
     <script src="<?php echo e(asset('site/js/custom.js')); ?>"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <?php echo $__env->yieldPushContent('scripts'); ?>
 
 </body>
 </html>
