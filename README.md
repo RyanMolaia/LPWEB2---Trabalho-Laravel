@@ -89,7 +89,7 @@ VALUES
 
 ### 🔹 Carros Detalhes
 
-<img width="1919" height="920" alt="detalhes_carro" src="https://github.com/user-attachments/assets/e940ae5c-db83-4bb5-9a3b-885f14f62c0d" />
+<img width="1915" height="895" alt="detalhes_carro" src="https://github.com/user-attachments/assets/ab4c87f9-51c2-4584-b060-4a84571bb190" />
 
 ### 🔹 Guia Contato
 
