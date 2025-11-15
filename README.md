@@ -46,6 +46,13 @@ Aqui você encontrará o passo a passo necessário para instalar, configurar e e
   Usuário: admin@admin.com
   Senha: admin1234
 
+### 🔹 OBSERVAÇÂO
+
+  Para incluir as fotos do veiculos siga os exemplos abaixo:
+
+  Campo "Link Imagem Priniciapl": "https://blog.autocompara.com.br/wp-content/uploads/2024/06/carros-esportivos-1024x683.jpeg.webp"
+  Campo "Outras Imagens" links separados por virgulas: "https://blog.autocompara.com.br/wp-content/uploads/2024/06/carros-esportivos-1024x683.jpeg.webp,         https://blog.autocompara.com.br/wp-content/uploads/2024/06/carros-esportivos-1024x683.jpeg.webp" 
+
 
 Fotos das telas do projeto:
 
