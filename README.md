@@ -77,27 +77,35 @@ VALUES
 
 ### 🔹 Index do site
 
-<img width="1919" height="907" alt="indes_site" src="https://github.com/user-attachments/assets/6eec52c6-dfe0-4be5-b0a0-9171f0451f2b" />
+<img width="1918" height="920" alt="indes_site" src="https://github.com/user-attachments/assets/439819fd-fe4f-4b47-955e-b3fb61306dc1" />
 
 ### 🔹 Guia Carros Novos
 
-<img width="1908" height="825" alt="novos_carros" src="https://github.com/user-attachments/assets/96ccea0e-f9f9-4630-859b-a608c2ddb433" />
+<img width="1919" height="919" alt="novos_carros" src="https://github.com/user-attachments/assets/74c3eb15-594c-4c2a-8ceb-e9ff7c92b48a" />
 
 ### 🔹 Guia Carros Seminovos
 
-<img width="1906" height="821" alt="seminovos_carros" src="https://github.com/user-attachments/assets/32302d06-ba6d-4920-8b36-61a95d27456c" />
+<img width="1919" height="925" alt="seminovos_carros" src="https://github.com/user-attachments/assets/cf5d8eef-44d2-45cd-a6ec-0f218cb7f93d" />
 
 ### 🔹 Carros Detalhes
 
-<img width="1906" height="878" alt="detalhes_carro" src="https://github.com/user-attachments/assets/7554a51d-2c01-40ff-a905-e0b43718308c" />
+<img width="1919" height="920" alt="detalhes_carro" src="https://github.com/user-attachments/assets/e940ae5c-db83-4bb5-9a3b-885f14f62c0d" />
+
+### 🔹 Guia Contato
+
+<img width="1919" height="922" alt="contato" src="https://github.com/user-attachments/assets/36048988-6fef-4974-9c9f-e643de919e68" />
+
+### 🔹 Guia Sobre
+
+<img width="1919" height="917" alt="sobre" src="https://github.com/user-attachments/assets/079894ba-bff7-4fcc-8085-a923e7dcda5a" />
 
 ### 🔹 Site Logado Como Admin
 
-<img width="1919" height="905" alt="site_logado_admin" src="https://github.com/user-attachments/assets/8efc1a7d-7e76-4c13-a959-feb7e4a4c3cf" />
+<img width="1919" height="917" alt="site_logado_admin" src="https://github.com/user-attachments/assets/daaaa847-9d79-4ccf-a864-ce56fcc208a6" />
 
 ### 🔹 Site Logado Como Cliente
 
-<img width="1917" height="909" alt="site_logado_cliente" src="https://github.com/user-attachments/assets/33881b84-4ea5-47f0-b91c-f1ee2e463b16" />
+<img width="1919" height="922" alt="site_logado_cliente" src="https://github.com/user-attachments/assets/d3c88e32-811a-47b6-8447-ff0174a65052" />
 
 ### 🔹 Tela de Login
 
