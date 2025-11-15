@@ -1,0 +1,209 @@
+/* ===== Tema Cinza + Dourado refinado ===== */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2b2b2b 0%, #3a3a3a 100%);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* Container */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Card */
+.login-card {
+    width: 460px; /* aumentado */
+    background: #3c3c3c;
+    border: 1px solid #c9a227;
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(201, 162, 39, 0.25);
+}
+
+/* Título */
+.login-title {
+    font-weight: 700;
+    font-size: 1.9rem;
+    color: #c9a227;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs flutuantes */
+.input-wrapper {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-wrapper input {
+    width: 100%;
+    background-color: #2f2f2f;
+    border: 1px solid #c9a227;
+    border-radius: 8px;
+    color: #fff;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 0 0.2rem rgba(201, 162, 39, 0.25);
+    background-color: #2f2f2f;
+    outline: none;
+}
+
+.input-wrapper label {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    color: #bfbfbf;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus + label,
+.input-wrapper input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    background: #3c3c3c;
+    padding: 0 5px;
+    font-size: 0.8rem;
+    color: #c9a227;
+}
+
+/* Checkbox */
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.form-check-input,
+input[type="checkbox"] {
+    accent-color: #c9a227;
+}
+
+/* Link “Esqueceu a senha?” */
+.forgot-password {
+    color: #c9a227 !important;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.forgot-password:hover {
+    color: #f5d87a !important;
+    text-decoration: underline;
+}
+
+/* Botão */
+.login-btn {
+    width: 100%;
+    background-color: #c9a227;
+    color: #2e2e2e;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #b18f1b;
+    color: #fff;
+    transform: scale(1.03);
+}
+
+/* Link registrar */
+.text-link {
+    color: #c9a227 !important;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    color: #f5d87a !important;
+    text-decoration: underline;
+}
+
+/* Toasts */
+.toast {
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    .login-card {
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+/* ===== AJUSTE DO BOTÃO DE MOSTRAR SENHA ===== */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 45px; /* espaço pro ícone */
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #c9a227;
+    font-size: 1.2rem;
+    padding: 0;
+    outline: none;
+    transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: #f5d87a;
+}
+
+.password-toggle i {
+    pointer-events: none; /* garante que o clique vai no botão, não no ícone */
+}
+
+/* Botão de Voltar */
+.btn-back {
+    background-color: transparent;
+    border: 1px solid #c9a227;
+    color: #c9a227;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #c9a227;
+    color: #2e2e2e;
+    transform: scale(1.03);
+}
+
