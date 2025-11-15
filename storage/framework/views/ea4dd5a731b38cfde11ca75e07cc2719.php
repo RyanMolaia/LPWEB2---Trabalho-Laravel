@@ -39,7 +39,6 @@
             id="email"
             value="<?php echo e(old('email', $request->email)); ?>"
             placeholder=" "
-            readonly
             required >
         <label for="email">E-mail</label>
     </div>
