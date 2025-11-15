@@ -44,7 +44,7 @@ Aqui você encontrará o passo a passo necessário para instalar, configurar e e
   Para acessar a area de administração, utilize o acesso abaixo:
 
   Usuário: admin@admin.com
-  Senha: admin123
+  Senha: admin1234
 
 
 Fotos das telas do projeto:
