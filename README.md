@@ -53,8 +53,27 @@ Aqui você encontrará o passo a passo necessário para instalar, configurar e e
   Campo "Link Imagem Priniciapl": "https://blog.autocompara.com.br/wp-content/uploads/2024/06/carros-esportivos-1024x683.jpeg.webp"
   Campo "Outras Imagens" links separados por virgulas: "https://blog.autocompara.com.br/wp-content/uploads/2024/06/carros-esportivos-1024x683.jpeg.webp,         https://blog.autocompara.com.br/wp-content/uploads/2024/06/carros-esportivos-1024x683.jpeg.webp" 
 
+Exemplo de insert direto no phpmyadmin:
 
-Fotos das telas do projeto:
+INSERT INTO carros 
+(marca_id, modelo_id, cor_id, ano, status, placa, quilometragem, valor, descricao, imagem_principal, outras_imagens)
+VALUES
+(
+  1, 
+  1, 
+  1,
+  2022,
+  'Disponível',
+  'ABC1A23',
+  12000,
+  6500000.00,
+  'Lamborghini Aventador SVJ em perfeito estado, modelo raro e de alta performance.',
+  'https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250424/lamborghini-aventador-6-5-v12-gasolina-lp-7704-svj-isr-wmimagem18500562532.webp?s=fill&w=552&h=414&q=60',
+  'https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250424/lamborghini-aventador-6-5-v12-gasolina-lp-7704-svj-isr-wmimagem18500572434.webp?s=fill&w=552&h=414&q=60, https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250424/lamborghini-aventador-6-5-v12-gasolina-lp-7704-svj-isr-wmimagem18500572434.webp?s=fill&w=552&h=414&q=60'
+);
+
+
+### 🔹 Fotos das telas do projeto:
 
 ### 🔹 Index do site
 
